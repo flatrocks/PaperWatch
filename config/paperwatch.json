@@ -1,11 +1,14 @@
 {
-  "host": "<HOST NAME>",
-  "port": "<PORT>",
-  "retentionPeriod": 3,
+  "host": "logsN.papertrailapp.com",
+  "port": "XXXXX",
   "sources": [
     {
       "prefix": "API-Gateway-Execution-Logs_",
       "consumer": "APIGatewayLogConsumer"
+    },
+    {
+      "prefix": "CloudTrail_",
+      "consumer": "CloudTrailConsumer"
     },
     {
       "prefix": "/aws/lambda/",

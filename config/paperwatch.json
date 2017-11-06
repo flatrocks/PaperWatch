@@ -3,11 +3,7 @@
   "port": "XXXXX",
   "sources": [
     {
-      "prefix": "API-Gateway-Execution-Logs_",
-      "consumer": "APIGatewayLogConsumer"
-    },
-    {
-      "prefix": "CloudTrail_",
+      "prefix": "CloudTrail/",
       "consumer": "CloudTrailConsumer"
     },
     {

@@ -12,11 +12,11 @@ exports.handler = function(event, context, callback){
     if(err)
       return callback(err);
 
-    // Construct the winston transport for forwarding lambda logs to papertrail
+    // Construct the winston transport for forwarding ecs container logs to papertrail
     var papertrail = new winston.transports.Papertrail({
       host: config.host,
       port: config.port,
-      hostname: "Lambda_" + data.owner + "_" + process.env.AWS_REGION,
+      hostname: data.logGroup.split('/').slice(0,-1).join('/'),
       program: data.logGroup.split('/').pop(),
       logFormat: function(level, message){
         return message;

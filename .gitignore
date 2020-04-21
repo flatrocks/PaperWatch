@@ -1,3 +1,5 @@
 node_modules
 *.zip
 config/paperwatch.json
+.DS_Store
+package-lock.json
